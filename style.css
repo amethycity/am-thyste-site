@@ -492,4 +492,14 @@ nav a.active::after{
         font-size:18px;
         padding:20px 30px;
     }
+
+@media(max-width:768px){
+
+    .minecraft-title{
+        font-size:58px;
+    }
+
+    .crystal{
+        font-size:50px;
+    }
 }
