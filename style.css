@@ -10,10 +10,9 @@ body{
 
     background:
     linear-gradient(
-    rgba(0,0,0,0.70),
-    rgba(0,0,0,0.82)
+    rgba(0,0,0,0.72),
+    rgba(0,0,0,0.84)
     ),
-
     url("background.jpg");
 
     background-size:cover;
@@ -33,17 +32,17 @@ body{
 
     position:fixed;
 
-    width:100%;
-    height:100%;
-
     top:0;
     left:0;
+
+    width:100%;
+    height:100%;
 
     background:
     radial-gradient(
     circle at center,
-    rgba(180,108,255,0.14),
-    transparent 65%
+    rgba(180,108,255,0.16),
+    transparent 70%
     );
 
     pointer-events:none;
@@ -65,7 +64,8 @@ header{
 
     padding:25px 70px;
 
-    background:rgba(0,0,0,0.35);
+    background:
+    rgba(0,0,0,0.32);
 
     backdrop-filter:blur(8px);
 
@@ -76,14 +76,14 @@ header{
 
     font-size:24px;
 
-    font-weight:700;
+    font-weight:800;
 
     letter-spacing:2px;
 
     color:white;
 
     text-shadow:
-    0 0 15px rgba(180,108,255,0.7);
+    0 0 20px rgba(180,108,255,0.8);
 }
 
 nav{
@@ -103,14 +103,14 @@ nav a{
 
     font-weight:600;
 
-    transition:0.3s;
-
     position:relative;
+
+    transition:0.3s;
 }
 
 nav a:hover{
 
-    color:#d29bff;
+    color:#d6a7ff;
 }
 
 nav a.active::after{
@@ -148,7 +148,7 @@ nav a.active::after{
     text-align:center;
 
     padding:
-    180px 20px 100px;
+    190px 20px 100px;
 }
 
 .title-container{
@@ -159,7 +159,7 @@ nav a.active::after{
 
     justify-content:center;
 
-    gap:25px;
+    gap:30px;
 
     flex-wrap:wrap;
 
@@ -172,29 +172,52 @@ nav a.active::after{
 
     font-weight:900;
 
-    letter-spacing:5px;
+    letter-spacing:4px;
 
-    background:
-    linear-gradient(
-    to bottom,
-    #ffeaff,
-    #dca4ff,
-    #b46cff,
-    #7d2cff
-    );
+    text-transform:uppercase;
 
-    -webkit-background-clip:text;
+    color:#dca4ff;
 
-    -webkit-text-fill-color:transparent;
+    position:relative;
+
+    transform:
+    skew(-8deg);
 
     text-shadow:
-    0 0 10px rgba(255,255,255,0.3),
-    0 0 25px rgba(180,108,255,0.7),
-    0 0 55px rgba(180,108,255,0.45),
-    7px 7px 0px rgba(40,0,70,0.7);
+
+    0 0 8px rgba(255,255,255,0.4),
+
+    0 0 18px rgba(180,108,255,0.9),
+
+    0 0 45px rgba(180,108,255,0.65),
+
+    4px 4px 0px #5d248f,
+    8px 8px 0px #3d125f,
+    12px 12px 0px #220033;
 
     animation:
     glow 3s infinite alternate;
+}
+
+.minecraft-title::before{
+
+    content:"AMETHYCITY";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    color:#f4d4ff;
+
+    z-index:-1;
+
+    transform:
+    translate(-4px,-4px);
+
+    opacity:0.45;
+
+    filter:blur(2px);
 }
 
 .crystal{
@@ -205,8 +228,8 @@ nav a.active::after{
 
     text-shadow:
     0 0 20px #c77dff,
-    0 0 50px #9d4edd,
-    0 0 80px #7b2cbf;
+    0 0 45px #9d4edd,
+    0 0 70px #7b2cbf;
 
     animation:
     floatCrystal 4s ease-in-out infinite;
@@ -227,7 +250,7 @@ nav a.active::after{
 
 .line{
 
-    width:260px;
+    width:240px;
 
     height:2px;
 
@@ -240,17 +263,17 @@ nav a.active::after{
     );
 
     box-shadow:
-    0 0 15px rgba(180,108,255,0.8);
+    0 0 15px rgba(180,108,255,0.7);
 }
 
 .middle-crystal{
 
     font-size:34px;
 
-    color:#d29bff;
+    color:#d6a7ff;
 
     text-shadow:
-    0 0 20px #d29bff;
+    0 0 18px #d6a7ff;
 }
 
 .hero h2{
@@ -286,7 +309,7 @@ nav a.active::after{
     display:grid;
 
     grid-template-columns:
-    repeat(4, 1fr);
+    repeat(4,1fr);
 
     gap:25px;
 
@@ -313,13 +336,13 @@ nav a.active::after{
 .feature:hover{
 
     transform:
-    translateY(-8px);
+    translateY(-10px);
 
     border:
     1px solid rgba(180,108,255,0.5);
 
     box-shadow:
-    0 0 35px rgba(180,108,255,0.2);
+    0 0 35px rgba(180,108,255,0.22);
 }
 
 .icon{
@@ -340,9 +363,9 @@ nav a.active::after{
 
     font-size:18px;
 
-    line-height:1.6;
-
     color:#cccccc;
+
+    line-height:1.6;
 }
 
 .discord-btn{
@@ -356,7 +379,7 @@ nav a.active::after{
     background:
     linear-gradient(
     to right,
-    #8b2cff,
+    #8d35ff,
     #c77dff
     );
 
@@ -382,7 +405,8 @@ nav a.active::after{
 
 .discord-btn:hover{
 
-    transform:scale(1.05);
+    transform:
+    scale(1.05);
 
     box-shadow:
     0 0 55px rgba(180,108,255,0.6);
@@ -415,7 +439,7 @@ nav a.active::after{
 
     font-size:38px;
 
-    color:#d29bff;
+    color:#d6a7ff;
 
     animation:
     bounce 2s infinite;
@@ -426,19 +450,31 @@ nav a.active::after{
     from{
 
         text-shadow:
-        0 0 10px rgba(255,255,255,0.3),
-        0 0 25px rgba(180,108,255,0.7),
-        0 0 55px rgba(180,108,255,0.45),
-        7px 7px 0px rgba(40,0,70,0.7);
+
+        0 0 8px rgba(255,255,255,0.4),
+
+        0 0 18px rgba(180,108,255,0.9),
+
+        0 0 45px rgba(180,108,255,0.65),
+
+        4px 4px 0px #5d248f,
+        8px 8px 0px #3d125f,
+        12px 12px 0px #220033;
     }
 
     to{
 
         text-shadow:
-        0 0 15px rgba(255,255,255,0.5),
-        0 0 40px rgba(200,120,255,1),
-        0 0 80px rgba(180,108,255,0.8),
-        9px 9px 0px rgba(40,0,70,0.9);
+
+        0 0 14px rgba(255,255,255,0.6),
+
+        0 0 30px rgba(200,120,255,1),
+
+        0 0 70px rgba(180,108,255,0.9),
+
+        4px 4px 0px #5d248f,
+        8px 8px 0px #3d125f,
+        12px 12px 0px #220033;
     }
 }
 
@@ -480,7 +516,7 @@ nav a.active::after{
 
     .features{
         grid-template-columns:
-        repeat(2, 1fr);
+        repeat(2,1fr);
     }
 }
 
@@ -505,11 +541,11 @@ nav a.active::after{
     }
 
     .hero{
-        padding-top:240px;
+        padding-top:250px;
     }
 
     .minecraft-title{
-        font-size:56px;
+        font-size:58px;
     }
 
     .crystal{
@@ -517,7 +553,7 @@ nav a.active::after{
     }
 
     .line{
-        width:100px;
+        width:90px;
     }
 
     .hero h2{
