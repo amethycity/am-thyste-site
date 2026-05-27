@@ -9,11 +9,17 @@ body{
     font-family:'Montserrat', sans-serif;
 
     background:
-    linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.82)),
+    linear-gradient(
+    rgba(0,0,0,0.70),
+    rgba(0,0,0,0.82)
+    ),
+
     url("background.jpg");
 
     background-size:cover;
+
     background-position:center;
+
     background-attachment:fixed;
 
     color:white;
@@ -27,38 +33,41 @@ body{
 
     position:fixed;
 
-    top:0;
-    left:0;
-
     width:100%;
     height:100%;
 
+    top:0;
+    left:0;
+
     background:
-    radial-gradient(circle at center,
-    rgba(170,100,255,0.12),
-    transparent 60%);
+    radial-gradient(
+    circle at center,
+    rgba(180,108,255,0.14),
+    transparent 65%
+    );
 
     pointer-events:none;
 }
 
 header{
 
+    position:fixed;
+
+    top:0;
+
     width:100%;
 
     display:flex;
 
     justify-content:space-between;
+
     align-items:center;
 
-    padding:28px 70px;
+    padding:25px 70px;
 
-    background:rgba(0,0,0,0.28);
+    background:rgba(0,0,0,0.35);
 
     backdrop-filter:blur(8px);
-
-    position:fixed;
-
-    top:0;
 
     z-index:100;
 }
@@ -73,12 +82,15 @@ header{
 
     color:white;
 
-    text-shadow:0 0 20px rgba(180,108,255,0.8);
+    text-shadow:
+    0 0 15px rgba(180,108,255,0.7);
 }
 
 nav{
+
     display:flex;
-    gap:50px;
+
+    gap:45px;
 }
 
 nav a{
@@ -97,7 +109,8 @@ nav a{
 }
 
 nav a:hover{
-    color:#c07cff;
+
+    color:#d29bff;
 }
 
 nav a.active::after{
@@ -106,15 +119,16 @@ nav a.active::after{
 
     position:absolute;
 
-    bottom:-10px;
     left:0;
+    bottom:-10px;
 
     width:100%;
     height:2px;
 
     background:#b46cff;
 
-    box-shadow:0 0 10px #b46cff;
+    box-shadow:
+    0 0 10px #b46cff;
 }
 
 .hero{
@@ -128,14 +142,15 @@ nav a.active::after{
     flex-direction:column;
 
     justify-content:center;
+
     align-items:center;
 
     text-align:center;
 
-    padding:160px 20px 80px;
+    padding:
+    180px 20px 100px;
 }
 
-.hero h1{
 .title-container{
 
     display:flex;
@@ -144,11 +159,11 @@ nav a.active::after{
 
     justify-content:center;
 
-    gap:30px;
-
-    margin-bottom:30px;
+    gap:25px;
 
     flex-wrap:wrap;
+
+    margin-bottom:30px;
 }
 
 .minecraft-title{
@@ -157,18 +172,15 @@ nav a.active::after{
 
     font-weight:900;
 
-    letter-spacing:6px;
-
-    text-transform:uppercase;
+    letter-spacing:5px;
 
     background:
     linear-gradient(
     to bottom,
-    #ffe7ff 0%,
-    #e6b3ff 20%,
-    #cf8cff 45%,
-    #b46cff 65%,
-    #7b2cff 100%
+    #ffeaff,
+    #dca4ff,
+    #b46cff,
+    #7d2cff
     );
 
     -webkit-background-clip:text;
@@ -176,17 +188,13 @@ nav a.active::after{
     -webkit-text-fill-color:transparent;
 
     text-shadow:
-    0 0 8px rgba(255,255,255,0.35),
-    0 0 25px rgba(180,108,255,0.8),
-    0 0 50px rgba(180,108,255,0.5),
-    6px 6px 0px rgba(60,0,90,0.7);
+    0 0 10px rgba(255,255,255,0.3),
+    0 0 25px rgba(180,108,255,0.7),
+    0 0 55px rgba(180,108,255,0.45),
+    7px 7px 0px rgba(40,0,70,0.7);
 
-    position:relative;
-
-    transform:perspective(500px)
-    rotateX(8deg);
-
-    animation:titleGlow 3s infinite alternate;
+    animation:
+    glow 3s infinite alternate;
 }
 
 .crystal{
@@ -197,18 +205,241 @@ nav a.active::after{
 
     text-shadow:
     0 0 20px #c77dff,
-    0 0 45px #9d4edd,
-    0 0 70px #7b2cbf;
+    0 0 50px #9d4edd,
+    0 0 80px #7b2cbf;
 
-    animation:floatCrystal 4s ease-in-out infinite;
+    animation:
+    floatCrystal 4s ease-in-out infinite;
 }
 
-.left-crystal{
-    transform:rotate(-12deg);
+.separator{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:20px;
+
+    margin-bottom:35px;
 }
 
-.right-crystal{
-    transform:rotate(12deg);
+.line{
+
+    width:260px;
+
+    height:2px;
+
+    background:
+    linear-gradient(
+    to right,
+    transparent,
+    #b46cff,
+    transparent
+    );
+
+    box-shadow:
+    0 0 15px rgba(180,108,255,0.8);
+}
+
+.middle-crystal{
+
+    font-size:34px;
+
+    color:#d29bff;
+
+    text-shadow:
+    0 0 20px #d29bff;
+}
+
+.hero h2{
+
+    font-size:42px;
+
+    font-weight:700;
+
+    letter-spacing:4px;
+
+    margin-bottom:30px;
+}
+
+.description{
+
+    max-width:900px;
+
+    font-size:24px;
+
+    line-height:1.8;
+
+    color:#dddddd;
+
+    margin-bottom:70px;
+}
+
+.features{
+
+    width:100%;
+
+    max-width:1400px;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4, 1fr);
+
+    gap:25px;
+
+    margin-bottom:70px;
+}
+
+.feature{
+
+    background:
+    rgba(0,0,0,0.42);
+
+    border:
+    1px solid rgba(255,255,255,0.08);
+
+    backdrop-filter:blur(8px);
+
+    border-radius:20px;
+
+    padding:35px 25px;
+
+    transition:0.35s;
+}
+
+.feature:hover{
+
+    transform:
+    translateY(-8px);
+
+    border:
+    1px solid rgba(180,108,255,0.5);
+
+    box-shadow:
+    0 0 35px rgba(180,108,255,0.2);
+}
+
+.icon{
+
+    font-size:42px;
+
+    margin-bottom:18px;
+}
+
+.feature h3{
+
+    font-size:24px;
+
+    margin-bottom:12px;
+}
+
+.feature p{
+
+    font-size:18px;
+
+    line-height:1.6;
+
+    color:#cccccc;
+}
+
+.discord-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    background:
+    linear-gradient(
+    to right,
+    #8b2cff,
+    #c77dff
+    );
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:24px 60px;
+
+    border-radius:18px;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    transition:0.35s;
+
+    box-shadow:
+    0 0 35px rgba(180,108,255,0.35);
+
+    margin-bottom:60px;
+}
+
+.discord-btn:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:
+    0 0 55px rgba(180,108,255,0.6);
+}
+
+.discord-icon{
+
+    width:34px;
+
+    filter:
+    brightness(0)
+    invert(1);
+}
+
+.scroll{
+
+    width:65px;
+    height:65px;
+
+    border-radius:50%;
+
+    border:
+    2px solid rgba(180,108,255,0.7);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:38px;
+
+    color:#d29bff;
+
+    animation:
+    bounce 2s infinite;
+}
+
+@keyframes glow{
+
+    from{
+
+        text-shadow:
+        0 0 10px rgba(255,255,255,0.3),
+        0 0 25px rgba(180,108,255,0.7),
+        0 0 55px rgba(180,108,255,0.45),
+        7px 7px 0px rgba(40,0,70,0.7);
+    }
+
+    to{
+
+        text-shadow:
+        0 0 15px rgba(255,255,255,0.5),
+        0 0 40px rgba(200,120,255,1),
+        0 0 80px rgba(180,108,255,0.8),
+        9px 9px 0px rgba(40,0,70,0.9);
+    }
 }
 
 @keyframes floatCrystal{
@@ -226,217 +457,20 @@ nav a.active::after{
     }
 }
 
-@keyframes titleGlow{
-
-    from{
-
-        text-shadow:
-        0 0 8px rgba(255,255,255,0.35),
-        0 0 25px rgba(180,108,255,0.8),
-        0 0 50px rgba(180,108,255,0.5),
-        6px 6px 0px rgba(60,0,90,0.7);
-    }
-
-    to{
-
-        text-shadow:
-        0 0 12px rgba(255,255,255,0.55),
-        0 0 40px rgba(200,120,255,1),
-        0 0 80px rgba(180,108,255,0.8),
-        8px 8px 0px rgba(60,0,90,0.9);
-    }
-}
-.line{
-
-    width:500px;
-    height:2px;
-
-    background:linear-gradient(to right,
-    transparent,
-    #b46cff,
-    transparent);
-
-    margin-bottom:35px;
-
-    box-shadow:0 0 15px rgba(180,108,255,0.7);
-}
-
-.hero h2{
-
-    font-size:42px;
-
-    font-weight:600;
-
-    letter-spacing:4px;
-
-    margin-bottom:30px;
-
-    animation:fadeUp 1.2s ease;
-}
-
-.description{
-
-    max-width:900px;
-
-    font-size:24px;
-
-    line-height:1.8;
-
-    color:#d0d0d0;
-
-    margin-bottom:70px;
-
-    animation:fadeUp 1.4s ease;
-}
-
-.features{
-
-    display:grid;
-
-    grid-template-columns:repeat(4, 1fr);
-
-    gap:30px;
-
-    width:100%;
-
-    max-width:1400px;
-
-    margin-bottom:70px;
-}
-
-.feature{
-
-    background:rgba(0,0,0,0.42);
-
-    border:1px solid rgba(255,255,255,0.08);
-
-    backdrop-filter:blur(8px);
-
-    padding:35px 25px;
-
-    border-radius:20px;
-
-    transition:0.35s;
-}
-
-.feature:hover{
-
-    transform:translateY(-10px);
-
-    border:1px solid rgba(180,108,255,0.5);
-
-    box-shadow:
-    0 0 30px rgba(180,108,255,0.2);
-}
-
-.icon{
-
-    font-size:40px;
-
-    margin-bottom:18px;
-}
-
-.feature h3{
-
-    font-size:24px;
-
-    margin-bottom:14px;
-
-    color:white;
-}
-
-.feature p{
-
-    font-size:18px;
-
-    color:#c7c7c7;
-
-    line-height:1.6;
-}
-
-.discord-btn{
-
-    background:
-    linear-gradient(to right,
-    #a855f7,
-    #c084fc);
-
-    color:white;
-
-    text-decoration:none;
-
-    font-size:24px;
-
-    font-weight:700;
-
-    padding:24px 60px;
-
-    border-radius:18px;
-
-    transition:0.35s;
-
-    box-shadow:
-    0 0 35px rgba(180,108,255,0.35);
-
-    margin-bottom:60px;
-}
-
-.discord-btn:hover{
-
-    transform:scale(1.05);
-
-    box-shadow:
-    0 0 50px rgba(180,108,255,0.55);
-}
-
-.scroll{
-
-    width:65px;
-    height:65px;
-
-    border-radius:50%;
-
-    border:2px solid rgba(180,108,255,0.7);
-
-    display:flex;
-
-    justify-content:center;
-    align-items:center;
-
-    font-size:40px;
-
-    color:#d8a5ff;
-
-    animation:bounce 2s infinite;
-}
-
 @keyframes bounce{
 
     0%,100%{
-        transform:translateY(0);
+        transform:translateY(0px);
     }
 
     50%{
-        transform:translateY(12px);
-    }
-}
-
-@keyframes fadeUp{
-
-    from{
-        opacity:0;
-        transform:translateY(40px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
+        transform:translateY(10px);
     }
 }
 
 @media(max-width:1200px){
 
-    .hero h1{
+    .minecraft-title{
         font-size:80px;
     }
 
@@ -445,38 +479,51 @@ nav a.active::after{
     }
 
     .features{
-        grid-template-columns:repeat(2, 1fr);
+        grid-template-columns:
+        repeat(2, 1fr);
     }
 }
 
 @media(max-width:768px){
 
     header{
-        padding:25px;
+
         flex-direction:column;
+
         gap:20px;
+
+        padding:25px;
     }
 
     nav{
+
         gap:20px;
+
         flex-wrap:wrap;
+
         justify-content:center;
     }
 
     .hero{
-        padding-top:220px;
+        padding-top:240px;
     }
 
-    .hero h1{
-        font-size:54px;
+    .minecraft-title{
+        font-size:56px;
+    }
+
+    .crystal{
+        font-size:50px;
     }
 
     .line{
-        width:90%;
+        width:100px;
     }
 
     .hero h2{
+
         font-size:22px;
+
         letter-spacing:2px;
     }
 
@@ -489,17 +536,9 @@ nav a.active::after{
     }
 
     .discord-btn{
+
         font-size:18px;
+
         padding:20px 30px;
-    }
-
-@media(max-width:768px){
-
-    .minecraft-title{
-        font-size:58px;
-    }
-
-    .crystal{
-        font-size:50px;
     }
 }
