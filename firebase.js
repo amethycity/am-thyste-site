@@ -25,6 +25,8 @@ getDoc
 
 from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
+/* FIREBASE CONFIG */
+
 const firebaseConfig = {
 
 apiKey: "AIzaSyAGGJOBvL8DSYa96bGlqb2581TEB3dGJpM",
@@ -42,6 +44,8 @@ appId: "1:1034014694698:web:f53b2a869291fb16e0d253",
 measurementId: "G-BXNRP8C0FB"
 
 };
+
+/* INITIALISATION */
 
 const app = initializeApp(firebaseConfig);
 
@@ -67,6 +71,18 @@ document.getElementById("register-email").value;
 const password =
 document.getElementById("register-password").value;
 
+if(
+pseudo === "" ||
+email === "" ||
+password === ""
+){
+
+alert("Remplis tous les champs");
+
+return;
+
+}
+
 try{
 
 const userCredential =
@@ -78,6 +94,8 @@ password
 
 const user = userCredential.user;
 
+/* SAUVEGARDE PROFIL */
+
 await setDoc(doc(db,"users",user.uid),{
 
 pseudo:pseudo,
@@ -85,9 +103,10 @@ email:email
 
 });
 
-alert("Compte créé !");
+alert("Compte créé avec succès !");
 
-window.location.href="login.html";
+window.location.href =
+"login.html";
 
 }catch(error){
 
@@ -114,6 +133,17 @@ document.getElementById("login-email").value;
 const password =
 document.getElementById("login-password").value;
 
+if(
+email === "" ||
+password === ""
+){
+
+alert("Remplis tous les champs");
+
+return;
+
+}
+
 try{
 
 await signInWithEmailAndPassword(
@@ -122,7 +152,10 @@ email,
 password
 );
 
-window.location.href="index.html";
+alert("Connexion réussie !");
+
+window.location.href =
+"index.html";
 
 }catch(error){
 
@@ -143,7 +176,11 @@ if(profileBox){
 
 onAuthStateChanged(auth, async(user)=>{
 
+/* CONNECTÉ */
+
 if(user){
+
+try{
 
 const docRef =
 doc(db,"users",user.uid);
@@ -153,7 +190,8 @@ await getDoc(docRef);
 
 if(docSnap.exists()){
 
-const data = docSnap.data();
+const data =
+docSnap.data();
 
 profileBox.innerHTML = `
 
@@ -191,36 +229,9 @@ Déconnexion
 
 `;
 
-document
-.getElementById("logout-btn")
+const logoutBtn =
+document.getElementById("logout-btn");
 
-.addEventListener("click",()=>{
+if(logoutBtn){
 
-signOut(auth).then(()=>{
-
-window.location.reload();
-
-});
-
-});
-
-}
-
-}else{
-
-profileBox.innerHTML = `
-
-<a href="login.html"
-class="login-link">
-
-CONNEXION
-
-</a>
-
-`;
-
-}
-
-});
-
-}
+logoutBtn.addEventListener("click",()=>
