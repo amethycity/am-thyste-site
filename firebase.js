@@ -15,8 +15,6 @@ updateProfile
 
 from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
-/* FIREBASE */
-
 const firebaseConfig = {
 
 apiKey: "AIzaSyAGGJOBvL8DSYa96bGlqb2581TEB3dGJpM",
@@ -218,11 +216,15 @@ document.getElementById("menu-toggle");
 const mobileMenu =
 document.getElementById("mobile-menu");
 
+if(menuToggle){
+
 menuToggle.addEventListener("click",()=>{
 
 mobileMenu.classList.toggle("show");
 
 });
+
+}
 
 /* SCROLL */
 
