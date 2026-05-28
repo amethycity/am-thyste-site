@@ -159,41 +159,43 @@ nav a.active::after{
 
     justify-content:center;
 
-    gap:30px;
+    gap:35px;
 
     flex-wrap:wrap;
 
-    margin-bottom:30px;
+    margin-bottom:35px;
 }
 
 .minecraft-title{
 
-    font-size:120px;
+    font-size:92px;
 
     font-weight:900;
 
-    letter-spacing:4px;
+    letter-spacing:6px;
 
     text-transform:uppercase;
 
-    color:#dca4ff;
+    color:#e2b5ff;
 
     position:relative;
 
     transform:
-    skew(-8deg);
+    skew(-6deg);
+
+    line-height:1;
 
     text-shadow:
 
-    0 0 8px rgba(255,255,255,0.4),
+    0 0 10px rgba(255,255,255,0.45),
 
-    0 0 18px rgba(180,108,255,0.9),
+    0 0 22px rgba(180,108,255,0.95),
 
-    0 0 45px rgba(180,108,255,0.65),
+    0 0 55px rgba(180,108,255,0.7),
 
-    4px 4px 0px #5d248f,
-    8px 8px 0px #3d125f,
-    12px 12px 0px #220033;
+    3px 3px 0px #6c2ca5,
+    6px 6px 0px #4d1d78,
+    9px 9px 0px #2b083f;
 
     animation:
     glow 3s infinite alternate;
@@ -208,21 +210,21 @@ nav a.active::after{
     top:0;
     left:0;
 
-    color:#f4d4ff;
+    color:#ffdfff;
 
     z-index:-1;
 
     transform:
-    translate(-4px,-4px);
+    translate(-3px,-3px);
 
-    opacity:0.45;
+    opacity:0.35;
 
-    filter:blur(2px);
+    filter:blur(1px);
 }
 
 .crystal{
 
-    font-size:90px;
+    font-size:80px;
 
     color:#c77dff;
 
@@ -451,30 +453,30 @@ nav a.active::after{
 
         text-shadow:
 
-        0 0 8px rgba(255,255,255,0.4),
+        0 0 10px rgba(255,255,255,0.45),
 
-        0 0 18px rgba(180,108,255,0.9),
+        0 0 22px rgba(180,108,255,0.95),
 
-        0 0 45px rgba(180,108,255,0.65),
+        0 0 55px rgba(180,108,255,0.7),
 
-        4px 4px 0px #5d248f,
-        8px 8px 0px #3d125f,
-        12px 12px 0px #220033;
+        3px 3px 0px #6c2ca5,
+        6px 6px 0px #4d1d78,
+        9px 9px 0px #2b083f;
     }
 
     to{
 
         text-shadow:
 
-        0 0 14px rgba(255,255,255,0.6),
+        0 0 16px rgba(255,255,255,0.7),
 
-        0 0 30px rgba(200,120,255,1),
+        0 0 35px rgba(200,120,255,1),
 
-        0 0 70px rgba(180,108,255,0.9),
+        0 0 75px rgba(180,108,255,0.95),
 
-        4px 4px 0px #5d248f,
-        8px 8px 0px #3d125f,
-        12px 12px 0px #220033;
+        3px 3px 0px #6c2ca5,
+        6px 6px 0px #4d1d78,
+        9px 9px 0px #2b083f;
     }
 }
 
@@ -545,7 +547,10 @@ nav a.active::after{
     }
 
     .minecraft-title{
-        font-size:58px;
+
+        font-size:72px;
+
+        letter-spacing:4px;
     }
 
     .crystal{
