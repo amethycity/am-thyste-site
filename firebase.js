@@ -15,7 +15,7 @@ updateProfile
 
 from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
-/* CONFIG FIREBASE */
+/* FIREBASE */
 
 const firebaseConfig = {
 
@@ -34,8 +34,6 @@ appId: "1:1034014694698:web:f53b2a869291fb16e0d253",
 measurementId: "G-BXNRP8C0FB"
 
 };
-
-/* INITIALISATION */
 
 const app =
 initializeApp(firebaseConfig);
@@ -144,13 +142,13 @@ user.displayName || "Steve";
 
 profileBox.innerHTML = `
 
-<div class="profile-menu">
+<div class="profile-bar">
 
 <img
 src="https://mc-heads.net/avatar/${pseudo}"
 class="minecraft-skin">
 
-<div class="profile-info">
+<div class="profile-text">
 
 <div class="profile-pseudo">
 
@@ -166,13 +164,15 @@ AMETHYCITY
 
 </div>
 
-<button
-class="logout-btn"
-id="logout-btn">
+<div class="profile-dropdown">
 
-Quitter
+<button id="logout-btn">
+
+Déconnexion
 
 </button>
+
+</div>
 
 </div>
 
@@ -180,8 +180,6 @@ Quitter
 
 const logoutBtn =
 document.getElementById("logout-btn");
-
-if(logoutBtn){
 
 logoutBtn.addEventListener("click",()=>{
 
@@ -192,8 +190,6 @@ window.location.reload();
 });
 
 });
-
-}
 
 }else{
 
@@ -214,14 +210,28 @@ CONNEXION
 
 }
 
-/* HEADER SCROLL */
+/* MENU MOBILE */
+
+const menuToggle =
+document.getElementById("menu-toggle");
+
+const mobileMenu =
+document.getElementById("mobile-menu");
+
+menuToggle.addEventListener("click",()=>{
+
+mobileMenu.classList.toggle("show");
+
+});
+
+/* SCROLL */
 
 const header =
-document.querySelector("header");
+document.getElementById("header");
 
 window.addEventListener("scroll",()=>{
 
-if(window.scrollY > 40){
+if(window.scrollY > 30){
 
 header.classList.add("scrolled");
 
