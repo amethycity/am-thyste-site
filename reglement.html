@@ -17,7 +17,7 @@
 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Press+Start+2P&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Press+Start+2P&display=swap" rel="stylesheet">
 
 </head>
 
@@ -25,104 +25,125 @@
 
 <div class="overlay"></div>
 
-<header>
+<header id="header">
 
-<div class="header-logo">
+<div class="topbar">
+
+<div class="header-left">
 
 <img src="crystal.png" class="mini-crystal">
 
-<span>
+<span class="site-name">
+
 AMETHYCITY
+
 </span>
 
 </div>
 
-<nav>
+<nav id="mobile-menu">
 
 <a href="index.html">
+
 ACCUEIL
+
 </a>
 
-<a class="active" href="#">
+<a href="reglement.html">
+
 RÈGLEMENT
-</a>
 
-<a href="login.html">
-CONNEXION
 </a>
 
 <a href="https://discord.gg/D24XCBb68" target="_blank">
+
 DISCORD
+
 </a>
 
 </nav>
 
+<div class="header-right">
+
+<div id="profile-box"></div>
+
+<button id="menu-toggle">
+
+☰
+
+</button>
+
+</div>
+
+</div>
+
 </header>
 
-<section class="hero">
+<section class="rules-page">
 
-<h1 class="rules-page-title">
+<div class="rules-box">
+
+<h1>
 
 RÈGLEMENT DU SERVEUR
 
 </h1>
 
-<div class="rules-box">
-
-<h3>
-1. Respect & comportement
-</h3>
-
 <p>
+
+<b>1. Respect & comportement</b>
+
+<br>
+
 Le respect entre tous les joueurs est obligatoire.
-Les insultes, provocations ou harcèlement sont interdits.
+
 </p>
 
-<h3>
-2. Cheats interdits
-</h3>
-
 <p>
-X-Ray, Fly, KillAura, duplication et logiciels de triche sont interdits.
+
+<b>2. Cheats interdits</b>
+
+<br>
+
+X-Ray, Fly, duplication et logiciels de triche interdits.
+
 </p>
 
-<h3>
-3. Bases & constructions
-</h3>
-
 <p>
-Le grief, le vol et les destructions sont interdits.
-Respectez les constructions des autres joueurs.
+
+<b>3. Bases & constructions</b>
+
+<br>
+
+Le grief et le vol sont interdits.
+
 </p>
 
-<h3>
-4. Industrie & machines
-</h3>
-
 <p>
-Les machines provoquant du lag pourront être limitées ou supprimées.
+
+<b>4. Industrie & machines</b>
+
+<br>
+
+Les machines provoquant du lag pourront être limitées.
+
 </p>
 
-<h3>
-5. Discord
-</h3>
-
 <p>
+
+<b>5. Discord</b>
+
+<br>
+
 Respectez également les règles du Discord.
-Aucune publicité ou spam n’est autorisé.
-</p>
 
-<h3>
-6. Sanctions
-</h3>
-
-<p>
-Les sanctions peuvent aller du warn jusqu’au bannissement définitif.
 </p>
 
 </div>
 
 </section>
+
+<script type="module" src="firebase.js"></script>
 
 </body>
 </html>
