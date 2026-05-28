@@ -10,7 +10,7 @@ font-family:'Montserrat',sans-serif;
 
 background:
 linear-gradient(
-rgba(0,0,0,0.68),
+rgba(0,0,0,0.72),
 rgba(0,0,0,0.92)
 ),
 url("background.jpg");
@@ -41,7 +41,7 @@ height:100%;
 background:
 radial-gradient(
 circle at center,
-rgba(168,85,247,0.08),
+rgba(168,85,247,0.06),
 transparent 70%
 );
 
@@ -59,44 +59,48 @@ left:0;
 
 width:100%;
 
-height:78px;
-
-display:flex;
-
-justify-content:space-between;
-align-items:center;
-
-padding:0 20px;
-
-background:
-rgba(8,8,12,0.55);
-
-backdrop-filter:blur(18px);
-
-border-bottom:
-1px solid rgba(255,255,255,0.05);
-
 z-index:9999;
 
 transition:.3s;
 }
 
-/* SCROLL EFFECT */
-
-header.scrolled{
+header.scrolled .topbar{
 
 background:
-rgba(5,5,10,0.88);
+rgba(8,8,12,0.92);
 
-backdrop-filter:blur(22px);
+border-bottom:
+1px solid rgba(199,125,255,0.2);
 
 box-shadow:
 0 0 30px rgba(168,85,247,0.15);
 }
 
-/* LOGO */
+/* TOPBAR */
 
-.header-logo{
+.topbar{
+
+height:78px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:0 18px;
+
+background:
+rgba(8,8,12,0.58);
+
+backdrop-filter:blur(18px);
+
+transition:.3s;
+}
+
+/* LEFT */
+
+.header-left{
 
 display:flex;
 
@@ -107,13 +111,13 @@ gap:12px;
 
 .mini-crystal{
 
-width:32px;
+width:30px;
 
 filter:
-drop-shadow(0 0 12px #c77dff);
+drop-shadow(0 0 10px #c77dff);
 }
 
-.header-logo span{
+.site-name{
 
 font-family:'Press Start 2P',cursive;
 
@@ -131,7 +135,7 @@ display:flex;
 
 align-items:center;
 
-gap:14px;
+gap:20px;
 }
 
 nav a{
@@ -152,6 +156,159 @@ nav a:hover{
 color:#d8b4fe;
 }
 
+/* RIGHT */
+
+.header-right{
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+}
+
+/* MENU BUTTON */
+
+#menu-toggle{
+
+display:none;
+
+background:none;
+
+border:none;
+
+color:white;
+
+font-size:28px;
+
+cursor:pointer;
+}
+
+/* PROFIL */
+
+.profile-bar{
+
+position:relative;
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+padding:8px 12px;
+
+background:
+rgba(255,255,255,0.05);
+
+border:
+1px solid rgba(255,255,255,0.06);
+
+transition:.3s;
+}
+
+.profile-bar:hover{
+
+border-color:#c77dff;
+
+box-shadow:
+0 0 20px rgba(168,85,247,0.2);
+}
+
+.minecraft-skin{
+
+width:36px;
+height:36px;
+
+image-rendering:pixelated;
+
+box-shadow:
+0 0 10px #c77dff;
+}
+
+.profile-pseudo{
+
+font-size:13px;
+
+font-weight:800;
+}
+
+.profile-rank{
+
+font-size:9px;
+
+color:#d8b4fe;
+}
+
+.profile-dropdown{
+
+position:absolute;
+
+top:60px;
+right:0;
+
+background:
+rgba(12,12,18,0.96);
+
+border:
+1px solid rgba(255,255,255,0.06);
+
+padding:14px;
+
+display:none;
+
+min-width:180px;
+}
+
+.profile-bar:hover .profile-dropdown{
+
+display:block;
+}
+
+.profile-dropdown button{
+
+width:100%;
+
+padding:12px;
+
+background:
+linear-gradient(
+to right,
+#7e22ce,
+#c77dff
+);
+
+border:none;
+
+color:white;
+
+font-weight:700;
+
+cursor:pointer;
+}
+
+/* LOGIN */
+
+.login-link{
+
+padding:12px 18px;
+
+background:
+linear-gradient(
+to right,
+#7e22ce,
+#c77dff
+);
+
+color:white;
+
+text-decoration:none;
+
+font-size:12px;
+
+font-weight:800;
+}
+
 /* HERO */
 
 .hero{
@@ -170,8 +327,6 @@ text-align:center;
 padding:40px 20px 100px;
 }
 
-/* LOGO */
-
 .main-logo{
 
 width:100%;
@@ -181,11 +336,8 @@ max-width:850px;
 margin-bottom:40px;
 
 filter:
-drop-shadow(0 0 18px #c77dff)
-drop-shadow(0 0 40px rgba(168,85,247,0.4));
+drop-shadow(0 0 15px #c77dff);
 }
-
-/* SEPARATOR */
 
 .separator{
 
@@ -193,14 +345,14 @@ display:flex;
 
 align-items:center;
 
-gap:15px;
+gap:14px;
 
 margin-bottom:40px;
 }
 
 .line{
 
-width:120px;
+width:100px;
 
 height:2px;
 
@@ -215,13 +367,8 @@ transparent
 
 .center-crystal{
 
-width:36px;
-
-filter:
-drop-shadow(0 0 10px #c77dff);
+width:34px;
 }
-
-/* TITRE */
 
 h2{
 
@@ -234,8 +381,6 @@ line-height:1.7;
 margin-bottom:30px;
 }
 
-/* DESCRIPTION */
-
 .description{
 
 max-width:800px;
@@ -243,353 +388,77 @@ max-width:800px;
 font-size:20px;
 
 line-height:1.8;
-
-margin-bottom:70px;
-}
-
-/* FEATURES */
-
-.features{
-
-display:grid;
-
-grid-template-columns:
-repeat(3,1fr);
-
-gap:20px;
-
-width:100%;
-
-max-width:1200px;
-}
-
-.feature-card{
-
-background:
-rgba(255,255,255,0.05);
-
-border:
-1px solid rgba(255,255,255,0.06);
-
-backdrop-filter:blur(12px);
-
-border-radius:22px;
-
-padding:30px;
-}
-
-.feature-icon{
-
-font-size:42px;
-
-margin-bottom:18px;
-}
-
-.feature-card h3{
-
-font-size:22px;
-
-margin-bottom:10px;
-}
-
-/* LOGIN */
-
-.login-page{
-
-min-height:100vh;
-
-display:flex;
-
-justify-content:center;
-align-items:center;
-
-padding:20px;
-}
-
-.login-box{
-
-width:100%;
-
-max-width:430px;
-
-background:
-rgba(15,15,20,0.75);
-
-border:
-1px solid rgba(255,255,255,0.06);
-
-border-radius:28px;
-
-padding:40px;
-
-backdrop-filter:blur(14px);
-
-text-align:center;
-}
-
-.login-logo{
-
-width:85px;
-
-margin-bottom:25px;
-}
-
-.login-box h1{
-
-font-family:'Press Start 2P',cursive;
-
-font-size:20px;
-
-margin-bottom:30px;
-}
-
-.login-box input{
-
-width:100%;
-
-padding:16px;
-
-margin-bottom:18px;
-
-border:none;
-
-border-radius:14px;
-
-background:
-rgba(255,255,255,0.08);
-
-color:white;
-
-font-size:15px;
-
-outline:none;
-}
-
-.login-box button{
-
-width:100%;
-
-padding:16px;
-
-border:none;
-
-border-radius:14px;
-
-background:
-linear-gradient(
-to right,
-#7e22ce,
-#c77dff
-);
-
-color:white;
-
-font-weight:800;
-
-cursor:pointer;
-
-box-shadow:
-0 0 20px rgba(168,85,247,0.25);
-}
-
-.switch-page{
-
-margin-top:20px;
-}
-
-.switch-page a{
-
-color:#d8b4fe;
-
-text-decoration:none;
-
-font-weight:700;
-}
-
-/* PROFIL BAR */
-
-.profile-menu{
-
-display:flex;
-
-align-items:center;
-
-gap:10px;
-
-height:52px;
-
-padding:0 10px;
-
-background:
-rgba(255,255,255,0.05);
-
-border:
-1px solid rgba(255,255,255,0.05);
-
-border-radius:18px;
-
-transition:.3s;
-}
-
-.profile-menu:hover{
-
-border-color:#c77dff;
-
-box-shadow:
-0 0 18px rgba(168,85,247,0.2);
-}
-
-.minecraft-skin{
-
-width:36px;
-height:36px;
-
-border-radius:10px;
-
-image-rendering:pixelated;
-
-box-shadow:
-0 0 10px #c77dff;
-}
-
-.profile-info{
-
-display:flex;
-
-flex-direction:column;
-}
-
-.profile-pseudo{
-
-font-size:13px;
-
-font-weight:800;
-
-line-height:1;
-}
-
-.profile-rank{
-
-font-size:9px;
-
-color:#d8b4fe;
-
-margin-top:4px;
-}
-
-.logout-btn{
-
-padding:8px 12px;
-
-border:none;
-
-border-radius:10px;
-
-background:
-linear-gradient(
-to right,
-#7e22ce,
-#c77dff
-);
-
-color:white;
-
-font-size:11px;
-
-font-weight:700;
-
-cursor:pointer;
-}
-
-.login-link{
-
-padding:10px 16px;
-
-border-radius:14px;
-
-background:
-linear-gradient(
-to right,
-#7e22ce,
-#c77dff
-);
-
-color:white;
-
-text-decoration:none;
-
-font-size:12px;
-
-font-weight:800;
 }
 
 /* MOBILE */
 
-@media(max-width:700px){
+@media(max-width:850px){
 
-header{
+#menu-toggle{
 
-padding:0 12px;
-}
-
-.header-logo span{
-
-display:none;
+display:block;
 }
 
 nav{
 
-gap:8px;
+position:absolute;
+
+top:78px;
+left:0;
+
+width:100%;
+
+background:
+rgba(8,8,12,0.97);
+
+border-top:
+1px solid rgba(255,255,255,0.06);
+
+display:none;
+
+flex-direction:column;
+
+align-items:flex-start;
+
+padding:20px;
+
+gap:20px;
 }
 
-nav a{
+nav.show{
 
-font-size:11px;
+display:flex;
 }
 
-.profile-menu{
+.site-name{
 
-padding:0 8px;
+display:none;
+}
 
-height:46px;
+.profile-text{
+
+display:none;
+}
+
+.profile-bar{
+
+padding:6px;
 }
 
 .minecraft-skin{
 
-width:30px;
-height:30px;
+width:34px;
+height:34px;
 }
 
-.profile-pseudo{
+.description{
 
-font-size:11px;
-}
-
-.logout-btn{
-
-padding:6px 8px;
-
-font-size:10px;
-}
-
-.features{
-
-grid-template-columns:1fr;
-}
-
-.line{
-
-width:60px;
+font-size:17px;
 }
 
 h2{
 
 font-size:15px;
-}
-
-.description{
-
-font-size:16px;
 }
 
 }
