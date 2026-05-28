@@ -451,3 +451,185 @@ flex-direction:column;
 }
 
 }
+/* HEADER FIXE PREMIUM */
+
+header{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+
+z-index:9999;
+
+background:
+rgba(0,0,0,0.55);
+
+backdrop-filter:blur(14px);
+
+border-bottom:
+1px solid rgba(255,255,255,0.06);
+
+box-shadow:
+0 0 30px rgba(168,85,247,0.08);
+}
+
+/* ESPACE HEADER */
+
+body{
+
+padding-top:120px;
+}
+
+/* PROFIL PREMIUM */
+
+.profile-menu{
+
+display:flex;
+
+flex-direction:column;
+
+gap:15px;
+
+background:
+rgba(20,20,25,0.92);
+
+padding:18px;
+
+border-radius:24px;
+
+border:
+1px solid rgba(255,255,255,0.06);
+
+box-shadow:
+0 0 35px rgba(168,85,247,0.18);
+
+min-width:240px;
+
+transition:.3s;
+}
+
+.profile-menu:hover{
+
+transform:
+translateY(-3px);
+
+box-shadow:
+0 0 50px rgba(168,85,247,0.28);
+}
+
+.profile-top{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+}
+
+.minecraft-skin{
+
+width:64px;
+height:64px;
+
+border-radius:18px;
+
+image-rendering:pixelated;
+
+box-shadow:
+0 0 25px #c77dff;
+}
+
+.profile-info{
+
+display:flex;
+
+flex-direction:column;
+}
+
+.profile-pseudo{
+
+font-size:22px;
+
+font-weight:800;
+
+color:white;
+
+text-shadow:
+0 0 15px #c77dff;
+}
+
+.profile-rank{
+
+font-size:12px;
+
+color:#d8b4fe;
+
+margin-top:4px;
+
+letter-spacing:1px;
+}
+
+.logout-btn{
+
+width:100%;
+
+padding:15px;
+
+border:none;
+
+border-radius:16px;
+
+background:
+linear-gradient(
+to right,
+#7e22ce,
+#c77dff
+);
+
+color:white;
+
+font-size:15px;
+
+font-weight:800;
+
+cursor:pointer;
+
+transition:.3s;
+
+box-shadow:
+0 0 25px rgba(168,85,247,0.35);
+}
+
+.logout-btn:hover{
+
+transform:scale(1.03);
+
+box-shadow:
+0 0 35px rgba(168,85,247,0.5);
+}
+
+.login-link{
+
+padding:14px 22px;
+
+border-radius:16px;
+
+background:
+linear-gradient(
+to right,
+#7e22ce,
+#c77dff
+);
+
+color:white;
+
+text-decoration:none;
+
+font-weight:800;
+
+box-shadow:
+0 0 25px rgba(168,85,247,0.3);
+}
