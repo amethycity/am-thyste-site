@@ -1,0 +1,421 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+font-family:'Montserrat',sans-serif;
+
+background:
+linear-gradient(
+rgba(0,0,0,0.68),
+rgba(0,0,0,0.86)
+),
+url("background.jpg");
+
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+
+color:white;
+
+min-height:100vh;
+
+overflow-x:hidden;
+}
+
+/* HEADER */
+
+header{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+
+padding:22px 15px;
+
+background:
+rgba(0,0,0,0.42);
+
+backdrop-filter:blur(10px);
+
+z-index:100;
+}
+
+.logo{
+
+text-align:center;
+
+font-size:26px;
+
+font-weight:800;
+
+letter-spacing:3px;
+
+margin-bottom:18px;
+
+color:white;
+
+text-shadow:
+0 0 12px #c77dff,
+0 0 30px #9d4edd;
+}
+
+nav{
+
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:18px;
+}
+
+nav a{
+
+color:white;
+
+text-decoration:none;
+
+font-size:14px;
+
+font-weight:700;
+
+position:relative;
+
+transition:0.3s;
+}
+
+nav a:hover{
+
+color:#d9a8ff;
+}
+
+nav a.active::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+bottom:-8px;
+
+width:100%;
+height:2px;
+
+background:#b46cff;
+
+box-shadow:
+0 0 10px #b46cff;
+}
+
+/* HERO */
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+align-items:center;
+
+text-align:center;
+
+padding:
+240px 20px 90px;
+}
+
+/* DIAMONDS */
+
+.diamond{
+
+font-size:38px;
+
+margin:18px 0;
+
+color:#d28cff;
+
+text-shadow:
+0 0 15px #d28cff,
+0 0 35px #9d4edd;
+
+animation:
+float 4s ease-in-out infinite;
+}
+
+/* MINECRAFT TITLE */
+
+h1{
+
+font-family:'Press Start 2P',cursive;
+
+font-size:30px;
+
+line-height:1.6;
+
+color:#efc8ff;
+
+margin-bottom:25px;
+
+text-transform:uppercase;
+
+text-shadow:
+
+0 0 10px rgba(255,255,255,0.55),
+
+0 0 22px rgba(199,125,255,1),
+
+0 0 45px rgba(157,78,221,0.95),
+
+3px 3px 0px #6a00f4,
+6px 6px 0px #3c096c;
+}
+
+/* SUBTITLE */
+
+h2{
+
+font-size:21px;
+
+font-weight:800;
+
+line-height:1.5;
+
+letter-spacing:2px;
+
+margin-bottom:28px;
+}
+
+/* DESCRIPTION */
+
+p{
+
+max-width:750px;
+
+font-size:18px;
+
+line-height:1.9;
+
+color:#ededed;
+
+margin-bottom:55px;
+}
+
+/* FEATURES */
+
+.features{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(170px,1fr));
+
+gap:18px;
+
+width:100%;
+
+max-width:1100px;
+
+margin-bottom:55px;
+}
+
+.card{
+
+background:
+rgba(255,255,255,0.05);
+
+border:
+1px solid rgba(255,255,255,0.08);
+
+backdrop-filter:blur(6px);
+
+padding:28px 18px;
+
+border-radius:18px;
+
+transition:0.3s;
+}
+
+.card:hover{
+
+transform:
+translateY(-8px);
+
+border-color:#b46cff;
+
+box-shadow:
+0 0 28px rgba(180,108,255,0.3);
+}
+
+.icon{
+
+font-size:34px;
+
+margin-bottom:16px;
+}
+
+.card h3{
+
+font-size:18px;
+
+margin-bottom:10px;
+}
+
+.card span{
+
+font-size:14px;
+
+color:#d7d7d7;
+
+line-height:1.6;
+}
+
+/* DISCORD BUTTON */
+
+.discord-btn{
+
+display:flex;
+
+align-items:center;
+justify-content:center;
+
+gap:12px;
+
+background:
+linear-gradient(
+to right,
+#8d35ff,
+#c77dff
+);
+
+padding:18px 22px;
+
+border-radius:16px;
+
+color:white;
+
+text-decoration:none;
+
+font-weight:700;
+
+font-size:15px;
+
+width:90%;
+max-width:340px;
+
+margin:auto;
+
+box-shadow:
+0 0 25px rgba(180,108,255,0.35);
+
+transition:0.3s;
+}
+
+.discord-btn:hover{
+
+transform:scale(1.03);
+
+box-shadow:
+0 0 40px rgba(180,108,255,0.55);
+}
+
+.discord-btn img{
+
+width:20px;
+height:20px;
+
+object-fit:contain;
+
+filter:
+brightness(0)
+invert(1);
+}
+
+/* ANIMATION */
+
+@keyframes float{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-10px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+.logo{
+
+font-size:22px;
+}
+
+nav{
+
+gap:14px;
+}
+
+nav a{
+
+font-size:12px;
+}
+
+.hero{
+
+padding-top:230px;
+}
+
+h1{
+
+font-size:26px;
+
+line-height:1.8;
+}
+
+h2{
+
+font-size:17px;
+}
+
+p{
+
+font-size:17px;
+
+line-height:1.8;
+}
+
+.features{
+
+grid-template-columns:1fr;
+}
+
+.card{
+
+padding:24px 18px;
+}
+
+.discord-btn{
+
+font-size:14px;
+
+padding:16px 18px;
+}
+
+}
