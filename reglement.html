@@ -121,3 +121,20 @@ RÈGLEMENT DU SERVEUR
 </div>
 
 </div>
+</section>
+
+<script>
+const menuBtn = document.getElementById("menu-toggle");
+const menu = document.getElementById("mobile-menu");
+
+if(menuBtn && menu){
+menuBtn.addEventListener("click",()=>{
+menu.classList.toggle("show");
+});
+}
+</script>
+
+<script type="module" src="firebase.js"></script>
+
+</body>
+</html>
